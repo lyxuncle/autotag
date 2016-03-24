@@ -37,7 +37,7 @@
 > 日期需在后台系统中选择准确发刊日
 > 变量``foldername``需设置为当期图片所在文件夹名称
 
-![chrome snippets](images/imgs_tags.png)
+![chrome snippets](images/folder_name.png)
 
 ![chrome snippets](images/imgs_tags.png)
 
