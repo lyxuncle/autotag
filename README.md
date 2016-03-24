@@ -33,5 +33,5 @@
 ### 2016-3-24 3.0更新
 
 增加图片获取文件名与尺寸，并合成标签，显示于控制台的功能
-![chrome snippets](images/pics_tags.png)
+![chrome snippets](images/imgs_tags.png)
 
