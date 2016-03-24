@@ -99,7 +99,7 @@ function imgTags(){
 
 function showImgTag(src, width, height, picname){
     var tag = '';
-        tagstart = '<div class="img"><img src=', 
+        tagstart = '<div class="img"><img lazy-src=', 
         tagend = '></div>', 
         stylesheet = 'line-height:50px;background:#eee url("'+src+'") no-repeat;';
 
