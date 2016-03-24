@@ -11,20 +11,27 @@
 
 > 注意！使用脚本添加的内容无法ctrl+z撤回！
 
-_使用方法：_
+## 使用方法：
 打开Chrome Dev Tools的Sources标签下的Snippets标签
-![chrome snippets](images/snippets.jpg)
+
+![chrome snippets](images/snippets.png)
+
 空白处右键－New
 将文末的代码段复制到右侧新弹出的标签页中，保存
 每次打开案例录入系统时，右键－Run，每次打开都要Run，它只是一段客户端脚本
-![chrome snippets](images/snippets_run.jpg)
+
+![chrome snippets](images/snippets_run.png)
+
 在输入框中选中需要包裹标签的文本，然后使用对应快捷键即可。
 
-2016-3-23 2.0更新
-增加快捷按钮列表，运行脚本后出现在页面左侧
-![chrome snippets](images/menu.jpg)
+### 2016-3-23 2.0更新
 
-2016-3-24 3.0更新
+增加快捷按钮列表，运行脚本后出现在页面左侧
+
+![chrome snippets](images/menu.png)
+
+### 2016-3-24 3.0更新
+
 增加图片获取文件名与尺寸，并合成标签，显示于控制台的功能
-![chrome snippets](images/pics_tags.jpg)
+![chrome snippets](images/pics_tags.png)
 
