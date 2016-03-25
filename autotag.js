@@ -13,7 +13,7 @@ var txtarea = document.getElementsByTagName('textarea'),
     shortCut = {
         ctrlL: ['<a href="">', '</a>'], 
         ctrlComma: ['<span class="ar_full_sub">', '</span>'], 
-        ctrlPeriod: ['<div class="img"><img lazy-src="', '" data-wdith="" data-height=""></div>'], 
+        ctrlPeriod: ['<div class="img"><img lazy-src="', '" data-width="" data-height=""></div>'], 
         ctrlSlsh: ['<div class="figurecapture">', '</div>'], 
         ctrlSbl: ['<div class="author">', '</div>'], 
         ctrlSbr: ['<div class="quote">', '</div>']
