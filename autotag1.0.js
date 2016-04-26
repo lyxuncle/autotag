@@ -3,14 +3,13 @@ var foldername = 'doubanspirite2';
 
 var txtarea = document.getElementsByTagName('textarea'), 
     cCode = {
-        12: {keyName:'L', shortfor:'外链'},   //outer link
-        44: {keyName:'Comma', shortfor:'案例标题'}, //case title
-        46: {keyName:'Period', shortfor:'图片'}, //image
-        47: {keyName:'Slsh', shortfor:'图片说明'}, //figure capture
-        27: {keyName:'Sbl', shortfor:'小编'}, //author
-        29: {keyName:'Sbr', shortfor:'引用'}, //quote
-        31: {keyName:'V', shortfor:'视频'},  //video
-        32: {keyName:'Sb', shortfor:'子标题'}  //subtitle
+        12: {keyName:'L', shortfor:'外链', shortkey: 'l'},   //outer link, ctrl+l
+        44: {keyName:'Comma', shortfor:'案例标题', shortkey: ','}, //case title, ctrl+,
+        46: {keyName:'Period', shortfor:'图片', shortkey: '.'}, //image, ctrl+.
+        47: {keyName:'Slsh', shortfor:'图片说明', shortkey: '/'}, //figure capture, ctrl+/
+        27: {keyName:'Sbl', shortfor:'小编', shortkey: '['}, //author, ctrl+[
+        29: {keyName:'Sbr', shortfor:'引用', shortkey: ']'}, //quote, ctrl+]
+        31: {keyName:'V', shortfor:'视频', shortkey: ''},  //video, ctrl+
     }, 
     shortCut = {
         ctrlL: ['<a href="">', '</a>'], 
@@ -19,9 +18,23 @@ var txtarea = document.getElementsByTagName('textarea'),
         ctrlSlsh: ['<div class="figurecapture">', '</div>'], 
         ctrlSbl: ['<div class="author">', '</div>'], 
         ctrlSbr: ['<div class="quote">', '</div>'], 
-        ctrlV: ['<video controls poster=""><source src="', '" type="video/mp4"></video>'], 
-        ctrlSb: ['<div class="subtitle">', '</div>']
+        ctrlV: ['<video controls poster=""><source src="', '" type="video/mp4"></video>']
     };
+Array.prototype.forEach.call(txtarea, function(item, idx){
+    // item.onkeypress=interactive;
+});
+
+function interactive(evt){
+    var ctrl = evt.ctrlKey, 
+        subKey = evt.charCode;
+
+    if(ctrl && (subKey===12 || subKey === 44 || subKey ===46 || subKey === 47 || subKey === 27 || subKey === 29)){
+        
+        
+        wrap(this, subKey);
+    }
+        
+}
 
 function wrap(self, code){
     var selStart = self.selectionStart, 
@@ -43,7 +56,7 @@ function view(){
     var viewHtml = '<ul id="viewMenu" style="position: fixed;top: 50%;left: 10px;background:#FFF;padding: 10px;text-align: center; border:1px solid #000; border-radius: 10px;">';
 
     for(key in cCode){
-        viewHtml += '<li><a class="viewMenuLink" data-code="'+key+'" href="javascript:void(0);">'+cCode[key].shortfor+'</a></li>';
+        viewHtml += '<li><a class="viewMenuLink" data-code="'+key+'" href="javascript:void(0);">'+cCode[key].shortfor+' ctrl+'+cCode[key].shortkey+'</a></li>';
     }
     viewHtml += '</ul>';
     document.querySelector('.header').innerHTML += viewHtml;

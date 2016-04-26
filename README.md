@@ -46,3 +46,7 @@
 
 ![chrome snippets](images/imgs_tags.png)
 
+### 2016-4-26 3.1更新
+
+增加视频、子标题标签
+去除快捷键（Windows与OS X不通用）
